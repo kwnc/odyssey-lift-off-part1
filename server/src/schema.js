@@ -4,7 +4,7 @@ const typeDefs = gql`
     type Query {
         "Get tracks array for homepage grid"
         tracksForHome: [Track!]!
-        spaceCats: [SpaceCat]
+        tracksForHomeFetch: [Track!]!
     }
 
     "A track is a group of Modules that teaches about a specific topic"
@@ -29,19 +29,6 @@ const typeDefs = gql`
         name: String!
         "Author's profile picture url"
         photo: String
-    }
-
-    type SpaceCat {
-        id: ID!
-        name: String!
-        age: Int
-        missions: [Mission]
-    }
-
-    type Mission {
-        id: ID!
-        name: String!
-        description: String!
     }
 `;
 
